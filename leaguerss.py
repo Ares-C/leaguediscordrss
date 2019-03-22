@@ -1,8 +1,8 @@
 ######################################################
  # Copyright (C) 2018 Tomás Caram <aresmta@gmail.com>
  # 
- # Unauthorized copying of this file, via any medium is strictly prohibited
- # Proprietary and confidential
+ # Released under the MIT License
+ # Refer to the LICENSE file for more information
  # Written by Tomás Caram <aresmta@gmail.com>, August 2018
 #######################################################
 
