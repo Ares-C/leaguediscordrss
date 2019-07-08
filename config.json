@@ -1,0 +1,15 @@
+{
+    "WEBHOOK_URL": ["https://discordapp.com/api/webhooks/"],
+    "SERVERS": {
+        "LAS": {
+            "name": "Latinoamérica Sur",
+            "url": "https://las.leagueoflegends.com/",
+            "lang": "es"
+        },
+        "LAN": {
+            "name": "Latinoamérica Norte",
+            "url": "https://lan.leagueoflegends.com/",
+            "lang": "es"
+        }
+    }
+}

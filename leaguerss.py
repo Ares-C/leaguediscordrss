@@ -10,22 +10,9 @@ from bs4 import BeautifulSoup
 import feedparser
 import requests
 import time
+import json
 
-DATA = {
-    "WEBHOOK_URL": ["https://discordapp.com/api/webhooks/"],
-    "SERVERS": {
-        "LAS": {
-            "name": "Latinoamérica Sur",
-            "url": "https://las.leagueoflegends.com/",
-            "lang": "es"
-        },
-        "LAN": {
-            "name": "Latinoamérica Norte",
-            "url": "https://lan.leagueoflegends.com/",
-            "lang": "es"
-        }
-    }
-}
+DATA = {}
 
 guids = {}
 titles = {}
@@ -92,14 +79,13 @@ def post_to_discord(title, description, link, image, date, server_name):
     	r = requests.post(webhook, json=payload, headers={'Content-Type': 'multipart/form-data'})
     	print ("HTTP REQUEST: ", r.status_code, r.text)
 
-if __name__ == '__main__':  
+if __name__ == '__main__':
+    print ("Reading from config file")
+    with open('config/config.json') as cfg:
+        DATA = json.load(cfg)
     print ("Fetching data from League of Legends' servers...")
     fetch_data()
     print ("Listening for new articles!")
     while True:
-        try:
-            check_for_new_articles()
-            time.sleep(10)
-        except:
-            print ("An error has occurred, retrying in 10 secs.")
-            time.sleep(10)
+        check_for_new_articles()
+        time.sleep(10)
