@@ -7,7 +7,7 @@ League of Legends RSS Discord webhook, made for the official Latin American Leag
 ## Installation process
 
 - pip install -r requirements.txt
-- Get a webhook URL ([tutorial](https://support.discordapp.com/hc/en/articles/228383668))
+- Create a webhook in your guild's desired channel, and get its URL ([tutorial](https://support.discordapp.com/hc/en/articles/228383668))
 - Head to `config/config.json` and modify the WEBHOOK_URL option
 - python3 lolfeed.py
 
